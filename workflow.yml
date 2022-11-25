@@ -1,0 +1,39 @@
+version: "1.1"
+name: Validating JSON
+
+# ワークフローの設定
+# https://docs.stepci.com/reference/workflow-syntax.html#config
+config:
+  # HTTP クライアントの設定
+  # https://docs.stepci.com/reference/workflow-syntax.html#config-http
+  http:
+    # テストする URL のベース
+    # https://docs.stepci.com/reference/workflow-syntax.html#config-http-baseurl
+    baseURL: https://jsonplaceholder.typicode.com
+
+# 環境変数
+# https://docs.stepci.com/reference/workflow-syntax.html#env
+env:
+  postId: 2 # ${{env.postId}} のように使うことができる
+
+tests:
+  example:
+    steps:
+      - name: GET request
+        http:
+          # リクエストするパス
+          # フルで指定してもいい (config.http.baseURL とは異なる URL を使用するときなど)
+          # url: https://jsonplaceholder.typicode.com/posts/${{env.postId}}
+          url: /posts/${{env.postId}}
+          # HTTP メソッド
+          method: GET
+          # 検証
+          check:
+            # ステータスコード
+            # 正規表現を使うこともできる
+            # status: /^20/
+            status: 200
+            # JSON の内容
+            jsonpath:
+              $.id: ${{env.postId}} # { "id": 2 } であることを検証
+              $.userId: 1
