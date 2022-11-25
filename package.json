@@ -4,6 +4,9 @@
   "author": "koki-develop <kou.pg.0131@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "fmt": "prettier --write ."
+  },
   "devDependencies": {
     "@stepci/runner": "^1.7.0",
     "prettier": "^2.8.0",
