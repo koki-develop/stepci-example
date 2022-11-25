@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "test": "vitest",
     "fmt": "prettier --write ."
   },
   "devDependencies": {
