@@ -1,0 +1,7 @@
+{
+  "name": "stepci-example",
+  "repository": "git@github.com:koki-develop/stepci-example.git",
+  "author": "koki-develop <kou.pg.0131@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
