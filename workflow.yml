@@ -14,7 +14,7 @@ config:
 # 環境変数
 # https://docs.stepci.com/reference/workflow-syntax.html#env
 env:
-  postId: 2 # ${{env.postId}} のように使うことができる
+  postId: "2" # ${{env.postId}} のように使うことができる
 
 tests:
   example:
