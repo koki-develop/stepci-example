@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "@stepci/runner": "^1.7.0",
     "vitest": "^0.25.3"
   }
 }
