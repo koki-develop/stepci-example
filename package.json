@@ -4,6 +4,9 @@
   "author": "koki-develop <kou.pg.0131@gmail.com>",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "test": "vitest",
     "fmt": "prettier --write ."
