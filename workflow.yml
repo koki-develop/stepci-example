@@ -33,6 +33,9 @@ tests:
             # 正規表現を使うこともできる
             # status: /^20/
             status: 200
+            # レスポンスヘッダ
+            headers:
+              Content-Type: application/json; charset=utf-8
             # JSON の内容
             jsonpath:
               $.id: ${{env.postId}} # { "id": 2 } であることを検証

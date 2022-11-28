@@ -24,6 +24,7 @@ it("from config", async () => {
               method: "GET",
               check: {
                 status: 200,
+                headers: { "Content-Type": "application/json; charset=utf-8" },
                 jsonpath: { "$.id": "${{env.postId}}", "$.userId": 1 },
               },
             },
