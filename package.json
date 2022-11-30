@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": false,
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "test": "vitest",
